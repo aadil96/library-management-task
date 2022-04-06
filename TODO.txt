@@ -1,12 +1,11 @@
 [TODO]
 Create APIs for library management systems using Laravel and Mysql:(User and Books module).
-[ ] Create APIs for Users module (register, login, profile with CRUD operations) with all possible validations using ACID Properties.
-        [ ] register
-        [ ] login
-        [ ] profile
-        [ ] Logout
-        [ ] 
-[ ] Create APIs for Book management (CRUD Operations) using ACID Properties.
+[ x ] Create APIs for Users module (register, login, profile with CRUD operations) with all possible validations using ACID Properties.
+        [ x ] register
+        [ x ] login
+        [ x ] profile
+        [ x ] Logout
+[ x ] Create APIs for Book management (CRUD Operations) using ACID Properties.
 [ ] Create the migration files for all the tables.
 [ ] Create API for users renting the book and return the book
 [ ] Add JWT authentication for all routes except login and register using middleware.

@@ -72,10 +72,18 @@ class Handler extends ExceptionHandler
                 return $this->respondWithNotFoundError($e);
             }
         });
+        
+        $this->renderable(function (\Exception $e, $request) {
+            if ($request->expectsJson()) {
+                return respondWithError(ApiCode::SERVER_ERROR);
+            }
+        });
 
-        $this->reportable(function (Throwable $e, $request) {
+        $this->reportable(function (Throwable $e) {
             // if ($request->expectsJson()) {
-            //     // return  CustomResponseBuilder::asError()
+            //     return  CustomResponseBuilder::asError(ApiCode::SERVER_ERROR)
+            //         ->withHttpCode(200)
+            //         ->build();
             // }
         });
     }
