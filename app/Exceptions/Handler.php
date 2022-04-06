@@ -72,7 +72,7 @@ class Handler extends ExceptionHandler
                 return $this->respondWithNotFoundError($e);
             }
         });
-        
+
         $this->renderable(function (\Exception $e, $request) {
             if ($request->expectsJson()) {
                 return respondWithError(ApiCode::SERVER_ERROR);
