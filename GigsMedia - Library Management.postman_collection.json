@@ -1,0 +1,868 @@
+{
+	"info": {
+		"_postman_id": "5bbbe975-c5fd-42b5-953a-cdcac1e06ac6",
+		"name": "GigsMedia - Library Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjJjZDU0ZTRmMTg4MGVkNDY0NjMyNGU1NmYzMGFmYzUyZDA2ODVjMmFmYjZmZjI0NmM3YWMyZDA5MjhiYjA5YmRmNDI5Njg3OTZhOTJmZDIiLCJpYXQiOjE2NDkxNjQ0MTAuMzQ1OTg2LCJuYmYiOjE2NDkxNjQ0MTAuMzQ1OTksImV4cCI6MTY2NDk3NTYxMC4zMzkyMjksInN1YiI6IjIiLCJzY29wZXMiOltdfQ.TXCY0InwOPkWdb4DdlW6WQ-BvYA2yWXy2aLnEZi_GlrHpSKroQ_4Y4fSbQuDbAPYbCcKeg3MTuzzQUxZ_MccKJL1cMfbX_QH1zndiMHM6v6Qwo5gq-YZTQ0nkZ5bjlHH6cGTU9R92U5dHs2IindUVxJuOX1qDFsABtNDhnhuFwRLk0GIxLRUROsHFbHRGabQh3qnJbga4x90jmfflUqpbCvVEumSVjNqk1M6V0JF-oYFTVTjXktuvqyfpncsiC3Ns22A46qgsaDQVCbwlgk1p5tYfCKaYCD0mXSJ4Ofac7VYcQiJvzPuzosVGB1nTXk0G2RDCKZYP4dFqJ4tt7xxi04ycD9DoxDG2y4JuEOpfZQl1Dd10qTojNaz7WcFkYCyx_7-Toeyaw9inEs62jxBEngpiWRCrf2-TrSh3SsGHUZwY5bwg8IGQm4bkF7AC6ziJncxOp7QwV_HKAtPwRZUUbIoRijbrFrsyrSfsKfqXwWhlaDkT6MFLecIrzXiFUBCqM0UA8abfB65pr9eA6KpWSzdl4_SftGN2h8h73F9fZ6TheCzeN77phrPOpc8hGYYjiGFeLIHDg2e5nHl7clqw4AXsMtTG2N9kLMdcaqCnd5g90qX9q3xkOHf1u5vDWIXS8aR0U-hXt9r9I_-g61_JmU4-B6TTYnwvh8vONLg6z0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/login",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjJjZDU0ZTRmMTg4MGVkNDY0NjMyNGU1NmYzMGFmYzUyZDA2ODVjMmFmYjZmZjI0NmM3YWMyZDA5MjhiYjA5YmRmNDI5Njg3OTZhOTJmZDIiLCJpYXQiOjE2NDkxNjQ0MTAuMzQ1OTg2LCJuYmYiOjE2NDkxNjQ0MTAuMzQ1OTksImV4cCI6MTY2NDk3NTYxMC4zMzkyMjksInN1YiI6IjIiLCJzY29wZXMiOltdfQ.TXCY0InwOPkWdb4DdlW6WQ-BvYA2yWXy2aLnEZi_GlrHpSKroQ_4Y4fSbQuDbAPYbCcKeg3MTuzzQUxZ_MccKJL1cMfbX_QH1zndiMHM6v6Qwo5gq-YZTQ0nkZ5bjlHH6cGTU9R92U5dHs2IindUVxJuOX1qDFsABtNDhnhuFwRLk0GIxLRUROsHFbHRGabQh3qnJbga4x90jmfflUqpbCvVEumSVjNqk1M6V0JF-oYFTVTjXktuvqyfpncsiC3Ns22A46qgsaDQVCbwlgk1p5tYfCKaYCD0mXSJ4Ofac7VYcQiJvzPuzosVGB1nTXk0G2RDCKZYP4dFqJ4tt7xxi04ycD9DoxDG2y4JuEOpfZQl1Dd10qTojNaz7WcFkYCyx_7-Toeyaw9inEs62jxBEngpiWRCrf2-TrSh3SsGHUZwY5bwg8IGQm4bkF7AC6ziJncxOp7QwV_HKAtPwRZUUbIoRijbrFrsyrSfsKfqXwWhlaDkT6MFLecIrzXiFUBCqM0UA8abfB65pr9eA6KpWSzdl4_SftGN2h8h73F9fZ6TheCzeN77phrPOpc8hGYYjiGFeLIHDg2e5nHl7clqw4AXsMtTG2N9kLMdcaqCnd5g90qX9q3xkOHf1u5vDWIXS8aR0U-hXt9r9I_-g61_JmU4-B6TTYnwvh8vONLg6z0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/logout",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Test",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "User",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "24",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Male",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "user@test.com",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "1234567890",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "NYC",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/register",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "validation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://library-management-task.test/api/register",
+									"protocol": "http",
+									"host": [
+										"library-management-task",
+										"test"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "library-management-task.test"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Apr 2022 09:11:02 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Apr 2022 09:11:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"code\": 422,\n    \"message\": \"Validation Error\",\n    \"data\": {\n        \"first_name\": \"The first name field is required.\",\n        \"last_name\": \"The last name field is required.\",\n        \"age\": \"The age field is required.\",\n        \"mobile\": \"The mobile field is required.\",\n        \"email\": \"The email field is required.\",\n        \"city\": \"The city field is required.\"\n    }\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "Test",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "User",
+											"type": "text"
+										},
+										{
+											"key": "age",
+											"value": " 24",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": " Male",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": " user@test.com",
+											"type": "text"
+										},
+										{
+											"key": "mobile",
+											"value": " 1234567890",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": " password",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": " password",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": " NYC",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://library-management-task.test/api/register",
+									"protocol": "http",
+									"host": [
+										"library-management-task",
+										"test"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "library-management-task.test"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Apr 2022 11:03:21 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Apr 2022 11:03:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 201,\n    \"message\": \"Created/Updated\",\n    \"data\": {}\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Test",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "User",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": " 24",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": " Male",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": " user@test.com",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": " 1234567890",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": " password",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": " password",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": " NYC",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/auth/profile",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update profile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "John",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Doe",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "35",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "1234567890",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "user@test.com",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Mumbai",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/auth/profile?_method=PUT",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"profile"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "PUT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show books rented",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/auth/books",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rent a book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/auth/books/:book/rent",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"books",
+								":book",
+								"rent"
+							],
+							"variable": [
+								{
+									"key": "book",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Return book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/auth/books/:book/return",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"books",
+								":book",
+								"return"
+							],
+							"variable": [
+								{
+									"key": "book",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "Add new book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "The Unicorn Project",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Gene Kim",
+									"type": "text"
+								},
+								{
+									"key": "cover_image",
+									"type": "file",
+									"src": "/C:/Users/agwan/Pictures/Screenshots/Screenshot (1).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/books",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show all books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/books",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show details of a specific book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/books/:book",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"books",
+								":book"
+							],
+							"variable": [
+								{
+									"key": "book",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "The Sapphire Project",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Gene Kim",
+									"type": "text"
+								},
+								{
+									"key": "cover_image",
+									"type": "file",
+									"src": "/C:/Users/agwan/Pictures/Screenshots/Screenshot (2).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/books/:book?_method=PUT",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"books",
+								":book"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "PUT"
+								}
+							],
+							"variable": [
+								{
+									"key": "book",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/books/:book",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"books",
+								":book"
+							],
+							"variable": [
+								{
+									"key": "book",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Show details of all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/users/",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/users/:user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"users",
+						":user"
+					],
+					"variable": [
+						{
+							"key": "user",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://library-management-task.test",
+			"type": "string"
+		},
+		{
+			"key": "email",
+			"value": "user@test.com",
+			"type": "string"
+		},
+		{
+			"key": "password",
+			"value": "password",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYzkxZmIyYzk2MGFiNTJjNTM1MzY4YTlhY2FiZWExZmJmM2IzMWMwNzVhMjIzMzA1NTk0Yjg4N2IxMmQyMmY4YmY2N2RlNDM1MzJmNmNmNzgiLCJpYXQiOjE2NDkxNjMzNzEuNDQ2MjE4LCJuYmYiOjE2NDkxNjMzNzEuNDQ2MjIyLCJleHAiOjE2NjQ5NzQ1NzEuNDM4NTA5LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.PNii3pKHovt6Iu6RTRJpowCRahYRM2fOPz8tfy42VUQDP3j9NiMMtw3enkTIUWLSrFTBZw4GInNK3PbX3dK9JUYN-iLT27s5nghtscnvurNC-IaLDg8WG2zOC6vtIMM12Xk-69mvfJvFx_vuVvObY9f1mMAQUGdi_AD9gPdpD3EKOdSHGQtJ-rJxbKkis0s1LIS72Ch7QSOi8LG-RGfgTkMlrzW5tW2VCqCmnE93-47Z9Dtv3nXBBusmrJlPvakj_5QnRes5cXG4lVbUZNGggRltMVJJiO2KqzNY742Ddh79jOHGJNIcMN5maYEEMk_BwZUh8c9Lo8FOZDbpjrMfzbZ4JEO7zbKKnf1Xa83tk4VaHsc92v_yV9776KwnmJjC9RxMdL6ehLWvc5OuzzxAET9FOFtSYXRh7m2I080QtT0at0g-df8ouoP1rUhpbxRN8ROZd5OHtEyk9m2Opnkjj4DkxRQSv8zVk49XbWp8_IpTRVwx0d0XSjE8myu6r9rPSNmdDzxIQ6LO5rcd-B66D8NS02pwVzrcyjaJi4akTDsnX-lvD_ViO4jHWYOc1yAuOp3hoihirwZFmWcarhkE5D5nvZWHjNJvCFc6qlXVo_5BitTdEo9H1GvaijtL4QbxdxT4giNZcNk0GIh9TkJ4EdHKGSjYztWBQH5rUGT7HW0",
+			"type": "string"
+		}
+	]
+}
