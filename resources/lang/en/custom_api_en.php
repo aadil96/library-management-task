@@ -1,0 +1,26 @@
+<?php
+
+return [
+//    'invalid_credentials' => "Mobile or password was invalid",
+//    'invalid_signature' => "Invalid/expired url provided",
+//    'no_record_found' => "No record was found",
+//    'otp_sent' => 'OTP sent',
+//    'otp_verified' => 'OTP verified',
+//    'service_failure' => 'Third party api response failure',
+//    'sub_cancelled' => 'Your subcription is cancelled and will take effect at the end of current billing cycle',
+//    'sub_inactive' => 'You must be subscribed to view this page',
+//    'sub_paused' => 'Auto renew turned off',
+//    'sub_resumed' => 'Auto renew turned on',
+//    'sub_start_failure' => 'Call to start subscription returned null',
+//    'sub_started' => 'Subscription Started',
+//    'sub_trial_start' => 'Subscription Trial Started',
+//    'user_exists' => 'Email/Mobile already exists in our records',
+    'ok' => "OK",
+    'success' => "Created/Updated",
+    'bad_request' => "Unprocessable request",
+    'not_found' => "The server can not find the requested resource",
+    'server_error' => 'Something went wrong',
+    'validation_error' => 'Validation Error',
+    'unauthenticated' => 'You must be logged in',
+    'unauthorized' => 'You do not have access rights to the content',
+];

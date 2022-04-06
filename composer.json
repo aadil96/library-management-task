@@ -9,6 +9,7 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.75",
+        "laravel/passport": "^10.3",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5"
     },
@@ -18,7 +19,8 @@
         "laravel/sail": "^1.13",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^5.10",
-        "phpunit/phpunit": "^9.5.10"
+        "phpunit/phpunit": "^9.5.10",
+        "squizlabs/php_codesniffer": "*"
     },
     "autoload": {
         "psr-4": {
@@ -30,7 +32,10 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
-        }
+        },
+        "files": [
+            "app/Helpers/ResponseHelpers.php"
+        ]
     },
     "scripts": {
         "post-autoload-dump": [
