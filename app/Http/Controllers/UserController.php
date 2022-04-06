@@ -68,6 +68,7 @@ class UserController extends Controller
     {
         $transactionExists = Transaction::where('user_id', Auth::id())
             ->where('book_id', $book->id)
+            ->where('returned_on', null)
             ->exists();
 
         if ($transactionExists) {
