@@ -73,11 +73,11 @@ class Handler extends ExceptionHandler
             }
         });
 
-        $this->renderable(function (\Exception $e, $request) {
-            if ($request->expectsJson()) {
-                return respondWithError(ApiCode::SERVER_ERROR);
-            }
-        });
+        // $this->renderable(function (\Exception $e, $request) {
+        //     if ($request->expectsJson()) {
+        //         return respondWithError(ApiCode::SERVER_ERROR);
+        //     }
+        // });
 
         $this->reportable(function (Throwable $e) {
             // if ($request->expectsJson()) {
