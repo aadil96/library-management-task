@@ -1,0 +1,3 @@
+tasks:
+  init: "Run composer install"
+  command: "composer install --ignore-platform-req:
