@@ -1,3 +1,6 @@
 tasks:
-  init: "Run composer install"
-  command: "composer install --ignore-platform-req:
+  - init: composer install --ignore-platform-req
+    command: cp .env.example .env
+ports:
+  - port: 8000
+    onOpen: open-preview
